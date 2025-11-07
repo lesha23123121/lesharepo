@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Інтерактивний інтерфейс</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <button class="menu-btn" aria-expanded="false">Відкрити меню</button>
+    <nav class="menu">
+      <ul>
+        <li><a href="#">Головна</a></li>
+        <li><a href="#">Проєкти</a></li>
+        <li><a href="#">Контакти</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="overlay"></div>
+
+  <main>
+    <button class="open-modal">Додати завдання</button>
+
+    <div class="tabs">
+      <div class="tab-buttons">
+        <button data-tab="all" class="tab is-active">Усі</button>
+        <button data-tab="active" class="tab">Активні</button>
+        <button data-tab="done" class="tab">Виконані</button>
+      </div>
+      <div class="tab-panels">
+        <div data-panel="all" class="panel is-active">
+          <ul class="task-list"></ul>
+        </div>
+        <div data-panel="active" class="panel">
+          <ul class="task-list"></ul>
+        </div>
+        <div data-panel="done" class="panel">
+          <ul class="task-list"></ul>
+        </div>
+      </div>
+      <p class="status">Показано: Усі</p>
+    </div>
+  </main>
+
+  <!-- Модальне вікно -->
+  <div class="modal">
+    <div class="modal-content">
+      <h2>Додати завдання</h2>
+      <input type="text" class="task-input" placeholder="Введіть назву" />
+      <small class="error"></small>
+      <div class="actions">
+        <button class="save-btn">Зберегти</button>
+        <button class="cancel-btn">Скасувати</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
